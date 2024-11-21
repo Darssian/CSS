@@ -1,0 +1,7 @@
+.block {
+    background: url('./minecraft-logo-scaled.jpg'), url('./22521f8dd1714baea0e78cf31fd1f0e3.jpg');
+    background-size:  150px, cover; /* Первое изображение уменьшено, второе заполняет блок */
+    background-position: top left, center; /* Первое сверху слева, второе по центру */
+    background-repeat: no-repeat, no-repeat; /* Убираем повтор для обоих изображений */
+    height: 300px;
+}

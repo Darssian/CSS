@@ -1,0 +1,68 @@
+body {
+    padding: 30px;
+}
+
+.block {
+    border: 5px solid red;
+    max-width: 800px;
+    margin: 0 auto;
+    height: 800px;
+
+    /* для позиционирования absolute относительно родителя */
+    position: relative;
+}
+.block div {
+    line-height: 30px;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.block_1 {
+    background-color: yellow;
+
+    position: absolute;
+    top: 20px;
+    left: 30px;
+
+    width: 100%;
+}
+
+.block_2 {
+    background-color: blue;
+    /* прикрепляет блок к экрану при прокрутке */
+    position: sticky;
+    top: 0;
+}
+
+.block_3 {  
+    background-color: sandybrown;
+
+    /* фиксирует относительно окна браузера */
+    position: fixed;
+}
+
+.list {
+    font-size: 18px;
+    padding: 0;
+    list-style: none; /* Убираем стандартные маркеры списка */
+}
+
+.list li {
+    margin-bottom: 10px;
+    position: relative; /* Для корректного позиционирования псевдоэлемента */
+    padding-left: 30px; /* Отступ для иконки */
+}
+
+.list li::before {
+    content: '';
+    background: url("https://img.icons8.com/?size=256&id=108633&format=png") no-repeat center;
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%); /* Выравниваем иконку по центру */
+}

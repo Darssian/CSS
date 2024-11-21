@@ -1,0 +1,48 @@
+.body {
+    padding: 30px;
+}
+
+.text {
+    font-size: 24px;
+    line-height: 33px;
+
+    margin-bottom: 30px;
+}
+
+/* первоя строка */
+.text::first-line{
+color: green;
+}
+
+/* первая буква */
+.text::first-letter{
+    color: red;
+    
+    font-size: 50px;
+}
+
+.list li {
+    font-size: 24px;
+
+    margin-bottom: 20px;
+}
+
+/* контент до тега */
+.list li::before{
+    content: '<<';
+
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: red;
+    display: inline-block;
+}
+
+/* контент после тега */
+.list li::after {
+    content: '>>';
+}
+
+.list li:hover::before {
+    background-color: yellow;
+}
